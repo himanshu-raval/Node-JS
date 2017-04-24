@@ -39,8 +39,21 @@ ver version of Your Package
 description
 author
 etc.
-Then Write yes.
+Then Write yes. (automatically create new package.json file and this all information store in package.json)
 
+
+------------------
+
+For install any Module 
+npm install --save <module name>
+   (--save) save data to package.json file
+   Check your Package.json file
+   
+ "dependencies": {
+    "express": "^4.15.2"
+  }
+   
+   
 
  
    
