@@ -6,5 +6,11 @@ node-v6.10.2-x64.msi
 -> open CMD And Check Node is installed or not.
 -> node -v  (return installed Version of Node)
 -> npm -v  (Return Instlled Version of NPM)
+run Js file using CMD.
+craete js file (node_test.js)
+console.log('check Node is Installed!');
+firt goto file Directory Then run Command > node node_test.js
+
+
 
 
