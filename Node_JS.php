@@ -4,7 +4,7 @@ Follow this Site :http://blog.teamtreehouse.com/install-node-js-npm-windows
 https://nodejs.org/en/download/
 node-v6.10.2-x64.msi
 -> open CMD And Check Node is installed or not.
--> node -v  (return installed Version of Node)
+-> node -v  (return installed Version of Node)Node Package Manager
 -> npm -v  (Return Instlled Version of NPM)
 run Js file using CMD.
 craete js file (node_test.js)
@@ -30,8 +30,22 @@ http.createServer(function (request, response) {
 console.log('Server running at http://127.0.0.1:8081/');
 ----------------------------------------
 
+Craete Firt Node Project:
+
+Crate Directory Using mkdir
+npm inti
+entr Yout Project Name like 'npm-test'
+ver version of Your Package
+description
+author
+etc.
+Then Write yes.
 
 
+ 
+   
+   
+   
 
 
 
