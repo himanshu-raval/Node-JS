@@ -175,6 +175,18 @@ var server = app.listen(8081, function () {
    https://www.tutorialspoint.com/nodejs/nodejs_restful_api.htm
    
    
+-----------------------------------------------------------------------
+   Node + Mysql
+   create directory using > mkdir node_mysql
+   goto node_mysql directory in cmd
+   > npm init
+   > npm install express --save
+   > npm install mysql --save // install  Mysql into Your node_module folder. you may check it.
+   
+   now Create one File. script.js
+   create new Database in your http://localhost/phpmyadmin/ -> node_mysql.
+   
+   
    
 
 
