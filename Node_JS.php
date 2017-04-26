@@ -186,6 +186,15 @@ var server = app.listen(8081, function () {
    now Create one File. script.js
    create new Database in your http://localhost/phpmyadmin/ -> node_mysql.
    
+   ------------------------------------------------------------------------------------------------
+   
+   nodemon ::
+   
+   Start Server if any file change.
+   
+   https://www.npmjs.com/package/nodemon
+   
+   
    
    
 
