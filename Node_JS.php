@@ -202,4 +202,4 @@ var server = app.listen(8081, function () {
    create Thumb of Uploaded file
 
 
-
+https://www.npmjs.com/package/node-thumbnail
