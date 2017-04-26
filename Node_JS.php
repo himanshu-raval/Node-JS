@@ -196,7 +196,10 @@ var server = app.listen(8081, function () {
    
    
    
+   ----------------------------------------------------------------------------------------------
+   image upload with multer-resizer.
    
+   create Thumb of Uploaded file
 
 
 
