@@ -6,12 +6,14 @@
 
 
 <b>JSON Data</b>
+
+```javascript
 var json ={
     name : "Himanshu Raval",
     age : 27,
     city : "Ahmedabad"
 } 
-
+```
 
 <b>Callback Paramiter</b>
 
