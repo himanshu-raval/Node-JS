@@ -140,6 +140,39 @@ https://www.mongodb.com/compare/mongodb-mysql?jmp=docs
 
 
 
+<b>Get Mongodb Databse Backup form Live Server & Restore</b>
+
+Using SSH Account.
+Goto Project Directory Then run Following Command.
+1) >> mongodump -u YOUR USERNAME -p YOUR PASSWORD -d DATABASE NAME
+2) >> mongodump -u YOUR USERNAME  -d DATABASE NAME
+   >> Enter ->  YOUR PASSWORD
+
+now you Show dump folder in your Directory. 
+just Create zip using following command
+>> zip -r dump.zip dump/
+
+Download zip in your Local Directory.
+move dump.zip in your directory thne extract zip. now in dump folder you see database name folder.
+
+Now Restore data in Your Local Server .
+
+>> mongorestore -d DATABSE NAME --dir dump/BATABSE NAME/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
