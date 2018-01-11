@@ -161,9 +161,30 @@ Now Restore data in Your Local Server .
 
 
 
+<b>async.parallel</b>
 
 
-
+					let task = []
+					player.friends.forEach(function(plr){
+						task.push(function(callback){
+							Game.AppSource.Player.Models.Player.findOne({ id: plr.friend_id })
+							.exec(function (err, player) {
+								 
+								//console.log(player);
+								callback(null,{
+									id : plr.friend_id,
+									level : player.level,
+									name : player.username,
+									avatar : player.selected_avatar,
+									coin : player.coin,
+									sharkpoolrewordcoin : (player.coin * 1)/100
+								})
+							});
+						})
+					});
+					async.parallel(task,function(err, results) {
+						callback(null, results);
+					});
 
 
 
