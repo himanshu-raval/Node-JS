@@ -190,12 +190,62 @@ Now Restore data in Your Local Server .
 
 
 
+-------------------------------------
 
 
 
 
-
-
+		let task = []
+			for (let j = 0; j < room.players.length; j++) {
+				let playerId = room.players[j].id;
+				let won = 0;
+				let lost = 0;
+				let escaped = 0;
+				task.push(function(callback){
+					 
+					
+							async.series({
+								won: function(callback) {
+									Room.count({ 'game.winner.id': playerId }).exec(function (err, won_count) {
+										if (err) { callback(err); }
+											callback(null, won_count);
+									})
+								},
+								lost: function(callback){
+									Room.count({ players: { $elemMatch: { id: playerId } } }, { 'game.winner.id': { $ne: playerId } }).exec(function (err, lost_count) {
+										if (err) { callback(err); }
+										callback(null, lost_count);
+									})
+								},
+								escaped: function(callback){
+									Room.count({ players: { $elemMatch: { id: playerId, status: 'Left' } } }).exec(function (err, escaped_count) {
+										if (err) { callback(err); }
+										callback(null, escaped_count);
+									});
+								}
+							}, function(err, results) {
+									// results is now equal to: {one: 1, two: 2}
+									console.log(results.won);
+									console.log(results.lost);
+									console.log(results.escaped);
+		
+									callback(null, {
+										id:room.players[j].id,
+										name:room.players[j].playerName,
+										data:{
+											won:results.won,
+											lost:results.lost,
+											escaped:results.escaped
+										}
+									});
+							});
+				})
+			};
+			async.parallel(task,function(err, results) {
+				
+				console.log("Results :: ",results);
+				return response.send({ status: 'success', message: "Player ScoreBoard", result:results});
+			});
 
 
 
